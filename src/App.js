@@ -2,7 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button } from 'antd-mobile'
-import Home from "./pages/home/home";
+import Page from './pages/page'
+import Home from './pages/home/home'
+import { BrowserRouter as Router,Link } from 'react-router-dom'
 
 function App () {
   return (
@@ -21,9 +23,6 @@ function App () {
           Learn React
         </a>
       </header>
-      <div className="conts">
-        内容区
-      </div>
       <Button
         type="primary"
         className="commodity-module__bottom__btn"
@@ -33,7 +32,14 @@ function App () {
         }}
         onClick={() => goPackage()}
       >{'立即购买'}</Button>
-      <Home />
+      <Router>
+        <ul>
+          <li><Link to="/">com</Link></li>
+          <li><Link to="/home">home</Link></li>
+          <li><Link to="/list">list</Link></li>
+        </ul>
+        <Page />
+      </Router>
     </div>
   );
 }

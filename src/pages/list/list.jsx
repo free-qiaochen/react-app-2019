@@ -1,12 +1,11 @@
 import React from 'react';
-import './home.scss';
 import { Button } from 'antd-mobile'
 
-function Home () {
+function List () {
   return (
     <div className="home">
       <div className="conts">
-        home内容区
+        list内容区
       </div>
       <Button
         type="primary"
@@ -16,7 +15,7 @@ function Home () {
           color: '#000'
         }}
         onClick={() => goPackage()}
-      >{'home btn'}</Button>
+      >{'list btn'}</Button>
     </div>
   );
 }
@@ -25,4 +24,4 @@ function goPackage (params) {
 
 }
 
-export default Home;
+export default List;
