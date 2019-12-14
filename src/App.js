@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Button } from 'antd-mobile'
+import Home from "./pages/home/home";
 
-function App() {
+function App () {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -19,8 +21,25 @@ function App() {
           Learn React
         </a>
       </header>
+      <div className="conts">
+        内容区
+      </div>
+      <Button
+        type="primary"
+        className="commodity-module__bottom__btn"
+        style={{
+          backgroundColor: '0',
+          color: '#000'
+        }}
+        onClick={() => goPackage()}
+      >{'立即购买'}</Button>
+      <Home />
     </div>
   );
+}
+function goPackage (params) {
+  console.log('---')
+
 }
 
 export default App;

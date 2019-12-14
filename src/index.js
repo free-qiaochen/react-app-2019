@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'antd-mobile/dist/antd-mobile.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { setFontSize } from './utils/common.js'
+
+setFontSize()
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
